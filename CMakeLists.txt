@@ -10,7 +10,7 @@ project ("crypto-pro-examples-cmake")
 
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-find_package(CryptoPro COMPONENTS cades)
+find_package(CryptoPro COMPONENTS cades xades)
 
 
 # Examples from CryptoPro SDK
@@ -27,8 +27,8 @@ target_link_libraries(GetCadesAttributes PRIVATE CryptoPro::cades)
 add_executable (GetCadesCountersignatureAttributes "src/GetCadesCountersignatureAttributes/GetCadesCountersignatureAttributes.cpp"  "src/samples_util.h")
 target_link_libraries(GetCadesCountersignatureAttributes PRIVATE CryptoPro::cades)
 
-add_executable (LowlevelDisplayDetachedSignature "src/LowlevelDisplayDetachedSignature/LowlevelDisplayDetachedSignature.cpp"  "src/samples_util.h")
-target_link_libraries(LowlevelDisplayDetachedSignature PRIVATE CryptoPro::cades)
+#add_executable (LowlevelDisplayDetachedSignature "src/LowlevelDisplayDetachedSignature/LowlevelDisplayDetachedSignature.cpp"  "src/samples_util.h")
+#target_link_libraries(LowlevelDisplayDetachedSignature PRIVATE CryptoPro::cades)
 
 add_executable (LowlevelDisplaySignatures "src/LowlevelDisplaySignatures/LowlevelDisplaySignatures.cpp"  "src/samples_util.h")
 target_link_libraries(LowlevelDisplaySignatures PRIVATE CryptoPro::cades)
@@ -70,7 +70,7 @@ add_executable (SimplifiedSignHashCades "src/SimplifiedSignHashCades/SimplifiedS
 target_link_libraries(SimplifiedSignHashCades PRIVATE CryptoPro::cades)
 
 add_executable (SimplifiedSignVerifyXadesBes "src/SimplifiedSignVerifyXadesBes/SimplifiedSignVerifyXadesBes.cpp"  "src/samples_util.h")
-target_link_libraries(SimplifiedSignVerifyXadesBes PRIVATE CryptoPro::cades)
+target_link_libraries(SimplifiedSignVerifyXadesBes PRIVATE CryptoPro::cades CryptoPro::xades)
 
 add_executable (SimplifiedVerifyCades "src/SimplifiedVerifyCades/SimplifiedVerifyCades.cpp"  "src/samples_util.h")
 target_link_libraries(SimplifiedVerifyCades PRIVATE CryptoPro::cades)
