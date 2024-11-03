@@ -84,3 +84,8 @@ target_link_libraries(SimplifiedVerifyHashCades PRIVATE CryptoPro::cades)
 add_executable (VerifyCountersign "src/VerifyCountersign/VerifyCountersign.cpp"  "src/samples_util.h")
 target_link_libraries(VerifyCountersign PRIVATE CryptoPro::cades)
 
+
+# Other examples
+
+add_executable (EncryptDecryptMessage "src/EncryptDecryptMessage/EncryptDecryptMessage.cpp")
+target_link_libraries(EncryptDecryptMessage PRIVATE crypt32)
